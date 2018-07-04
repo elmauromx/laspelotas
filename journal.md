@@ -12,6 +12,10 @@
 7. How to commit changes on modified files to master branch
 8. Github charges you $7.00 USD at month to have private repositories
 9. git reset can be use to rollback a file already uploaded to stage already
+10. git commit components
+..* id. A hash for the commit
+..* Author
+..* Date
 
 
 ### Are there any impediments or doubts for the next lesson?
