@@ -16,6 +16,13 @@
 ..* id. A hash for the commit
 ..* Author
 ..* Date
+11. How to change date on an already commited change
+git filter-branch --env-filter \
+    'if [ $GIT_COMMIT = 45ce30ca7d6545a750b549f9dc3de9f6f3617f02 ]
+     then
+         export GIT_AUTHOR_DATE="Tue Jul 3 20:57:32 2018 -0500"
+         export GIT_COMMITTER_DATE="Tue Jul 3 20:57:32 2018 -0500"
+     fi'
 
 
 ### Are there any impediments or doubts for the next lesson?
