@@ -17,7 +17,7 @@
       1. Author
       1. Date
 11. How to change date on an already commited change
-```python
+```bash
 git filter-branch --env-filter
     'if [ $GIT_COMMIT = 45ce30ca7d6545a750b549f9dc3de9f6f3617f02 ]
      then
