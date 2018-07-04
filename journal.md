@@ -16,6 +16,8 @@
       1. id. A hash for the commit
       1. Author
       1. Date
+      1. email
+      1. comment
 11. How to change date on an already commited change
 ```bash
 git filter-branch --env-filter
