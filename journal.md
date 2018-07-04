@@ -13,18 +13,21 @@
 8. Github charges you $7.00 USD at month to have private repositories
 9. git reset can be use to rollback a file already uploaded to stage already
 10. git commit components
-  * id. A hash for the commit
-  * Author
-  * Date
+      1. id. A hash for the commit
+      1. Author
+      1. Date
 11. How to change date on an already commited change
-
 ```python
-      git filter-branch --env-filter
-          `if [ $GIT_COMMIT = 45ce30ca7d6545a750b549f9dc3de9f6f3617f02 ]
-           then
-               export GIT_AUTHOR_DATE="Tue Jul 3 20:57:32 2018 -0500"
-               export GIT_COMMITTER_DATE="Tue Jul 3 20:57:32 2018 -0500"
-           fi`
+git filter-branch --env-filter
+    'if [ $GIT_COMMIT = 45ce30ca7d6545a750b549f9dc3de9f6f3617f02 ]
+     then
+         export GIT_AUTHOR_DATE="Tue Jul 3 20:57:32 2018 -0500"
+         export GIT_COMMITTER_DATE="Tue Jul 3 20:57:32 2018 -0500"
+     fi'
+```
+1. How to add aliases on git (with commands):
+```bash
+git config --global alias.undo 'reset --soft HEAD^'
 ```
 
 ### Are there any impediments or doubts for the next lesson?
